@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* primary colors */
+  --color-blue: hsl(246, 80%, 60%);
+  --color-light-red-work: hsl(15, 100%, 70%);
+  --color-soft-blue-play: hsl(195, 74%, 62%);
+  --color-light-red-study: hsl(348, 100%, 68%);
+  --color-lime-green-exercise: hsl(145, 58%, 55%);
+  --color-violet-social: hsl(264, 64%, 52%);
+  --color-soft-orange-self-care: hsl(43, 84%, 65%);
+  /* neutral colors */
+  --color-very-dark-blue: hsl(226, 43%, 10%);
+  --color-dark-blue: hsl(235, 46%, 20%);
+  --color-desaturated-blue: hsl(235, 45%, 61%);
+  --color-pale-blue: hsl(236, 100%, 87%);
+  --border-radius: 15px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  max-width: 1440px;
+  background-color: var(--color-very-dark-blue);
+  color: #fff;
+
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.u-marg-bottom-sm {
+  margin-bottom: 2rem;
+}
+
+.container {
+  width: 80vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  row-gap: 3rem;
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 98vw;
+    margin: 3rem auto;
+  }
+
+  /* .container > *{
+        min-height: 30rem;
+        min-height: max-content;
+        width: 95%;
+        margin: 2rem auto;
+    } */
+
+  .container__element {
+    min-height: 30rem;
+    width: 95%;
+    margin: 2rem auto;
+  }
+}
+
+.container__element {
+  border-radius: var(--border-radius);
+  background-color: var(--color-desaturated-blue);
+  background-color: var(--color-dark-blue);
+  position: relative;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.element__user {
+  background-color: var(--color-blue);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+}
+
+.container__element--user-info {
+  grid-row: 1 / span 2;
+}
+
+.element__user img {
+  --size: 5rem;
+  width: var(--size);
+  height: var(--size);
+  min-width: var(--size);
+  min-height: var(--size);
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-bottom: 1.5rem;
+}
+
+.element__user--text {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.element__user--name {
+  font-weight: normal;
+  font-size: 4rem;
+  text-transform: capitalize;
+}
+
+.user__bottom {
+  padding: 2rem;
+}
+
+.element__user--text-active {
+  font-weight: 500;
+}
+
+/* work */
+.container__element--work {
+  background-image: url(./images/icon-work.svg);
+  background-color: var(--color-light-red-work);
+}
+
+.container__element--inner {
+  border-radius: var(--border-radius);
+  background-color: var(--color-dark-blue);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  padding: 1.5rem;
+}
+
+.container__inner--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container__inner--header-type {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+.container__inner--text {
+  font-weight: normal;
+  font-size: 5rem;
+  font-weight: 200;
+}
+
+.container__inner-text-sub {
+  font-size: 1.4rem;
+  font-weight: normal;
+  text-transform: capitalize;
+  margin-top: 1rem;
+}
+
+.container__element--play {
+  background-image: url(./images/icon-play.svg);
+  background-color: var(--color-soft-blue-play);
+}
+
+.container__element--study {
+  background-image: url(./images/icon-study.svg);
+  background-color: var(--color-light-red-study);
+}
+
+.container__element--exercise {
+  background-image: url(./images/icon-exercise.svg);
+  background-color: var(--color-lime-green-exercise);
+}
+
+.container__element--social {
+  background-image: url(./images/icon-social.svg);
+  background-color: var(--color-violet-social);
+}
+
+.container__element--self-care {
+  background-image: url(./images/icon-self-care.svg);
+  background-color: var(--color-soft-orange-self-care);
+}
